@@ -1,0 +1,21 @@
+<div class="loginCard">
+  <h1>Log in</h1>
+    <div class="field">
+      <label>Username</label>
+      <input type="text" pInputText [(ngModel)]="login" style="height: 33px;"> 
+    </div>
+    <br>
+    <div class="field">
+      <label>Password</label>
+      <p-password [(ngModel)]="password" [feedback]="false" [toggleMask]="true"></p-password>
+    </div>
+    <div>
+      <span>Forgot password? <a href="#">Reset password</a></span>
+    </div>
+    <br>
+    <br>
+    <div style="position: relative;">
+      <p-button label="Login" [style]="{margin: '10px'}" (onClick)="submitLogin()"></p-button>
+      <a id="newAcc" href="#">Create new account</a>
+    </div> 
+</div>

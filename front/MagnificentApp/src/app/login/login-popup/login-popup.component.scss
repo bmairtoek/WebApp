@@ -1,0 +1,32 @@
+.loginCard {
+    height: 400px;
+    width: 350px;
+}
+
+.field {
+    // display: flex;
+    flex-direction: column;
+    
+    display: table;
+    margin: 0 auto;
+
+    width: 100%;
+
+    label, input {
+        width: 100%;
+    }
+}
+
+::ng-deep {
+    .field div, input {
+        width: 100%;
+    }
+}
+
+#newAcc{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
