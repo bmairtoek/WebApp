@@ -8,7 +8,7 @@ using BridgePointsCounter.Enums;
 
 namespace BridgePointsCounter
 {
-    class PointsCounter
+    public class PointsCounter
     {
         private readonly int bid;
         private readonly int scored;

@@ -17,21 +17,6 @@ namespace WebApplication.Controllers
         /// <summary>
         /// Calculates score for sent dto
         /// </summary>
-        /// <remarks>
-        /// Sample request:
-        /// 
-        ///     POST /PointsCounter
-        ///     {
-        ///         "bid": 3,
-        ///         "scored": 4,
-        ///         "pointsInPair": 24,
-        ///         "color": 4,
-        ///         "afterGame": false,
-        ///         "enemyAfterGame": true,
-        ///         "doubles": 0
-        ///     }
-        ///     
-        /// </remarks>
         /// <response code="200">Score</response>
         [HttpPost]
         [ProducesResponseType(typeof(int), 200)]
