@@ -1,5 +1,5 @@
 <p-button id="logIn" label="Log in" (onClick)="OpenLoginPopup()"></p-button>
 <p-dialog [showHeader]="false" [(visible)]="displayLoginModal" [modal]="true" [baseZIndex]="10000"
-    [draggable]="false" [resizable]="false">
-    <app-login-popup></app-login-popup>
+    [draggable]="false" [resizable]="false" [dismissableMask]="true">
+    <app-login-popup (closeWindowEvent)="closeWindow()"></app-login-popup>
 </p-dialog>

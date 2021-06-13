@@ -8,13 +8,13 @@ namespace WebApplication.Models
 {
     public class PointsCounterDto
     {
-        /// <example>3</example>
+        /// <example>5</example>
         public int Bid { get; set; }
-        /// <example>3</example>
+        /// <example>5</example>
         public int Scored { get; set; }
         /// <example>25</example>
         public int PointsInPair { get; set; }
-        /// <example>4</example>
+        /// <example>0</example>
         public Colors Color { get; set; }
         /// <example>true</example>
         public bool AfterGame { get; set; }

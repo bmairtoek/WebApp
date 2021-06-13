@@ -1,21 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-login-popup',
   templateUrl: './login-popup.component.html',
   styleUrls: ['./login-popup.component.scss']
 })
-export class LoginPopupComponent implements OnInit {
-
+export class LoginPopupComponent {
+  @Output() public closeWindowEvent: EventEmitter<void> = new EventEmitter();
   public login: string = "";
   public password: string = "";
-  constructor() { }
 
-  ngOnInit() {
-  }
-
-  submitLogin(): void {
+  public submitLogin(): void {
     console.log("login: " + this.login);
     console.log("password: " + this.password);
+  }
+
+  public closeWindow(): void {
+    console.log("close");
+    this.closeWindowEvent.emit();
   }
 }

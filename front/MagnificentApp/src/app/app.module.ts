@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { FormsModule } from "@angular/forms";
+import { PointsCalculatorModule } from './points-calculator/points-calculator.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FormsModule } from "@angular/forms";
     AppRoutingModule,
     LoginModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    PointsCalculatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -16,4 +16,8 @@ export class LoginComponent implements OnInit {
   public OpenLoginPopup(): void {
     this.displayLoginModal = !this.displayLoginModal;
   }
+
+  public closeWindow(): void {
+    this.displayLoginModal = false;
+  }
 }

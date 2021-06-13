@@ -1,0 +1,19 @@
+.vertical-text {
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+}
+
+.vertical-input-holder {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+
+    > label {
+        margin: 0px;
+        margin-right: 10px;
+    }
+}
+
+#submit {
+    margin: auto;
+}
