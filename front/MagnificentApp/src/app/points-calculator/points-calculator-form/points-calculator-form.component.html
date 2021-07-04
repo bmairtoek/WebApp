@@ -1,6 +1,5 @@
-<p-card [style]="{'width': '800px', 'margin': 'auto'}">
-  <h5>Advanced</h5>
-  <div class="p-fluid p-formgrid p-grid">
+<p-card [style]="{'max-width': '800px', 'margin': 'auto'}">
+  <div class="p-fluid p-formgrid p-grid" id="main-wrapper">
     <div class="p-field p-col-12 p-md-4 vertical-input-holder">
       <label class="vertical-text" for="1">Wylicytowane</label>
       <p-inputNumber [(ngModel)]="pointsCounterDto.bid" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="1" [style]="{'width':'70px'}"
@@ -23,43 +22,48 @@
       </p-inputNumber>
     </div>
 
-    <div class="p-field p-col-12 p-md-4">
-      <label>Kolor</label>
-      <div class="p-field-radiobutton">
-        <p-radioButton name="clubs" label="Trefl" [value]="0" [(ngModel)]="pointsCounterDto.color" inputId="clubs"></p-radioButton>
-      </div>
-      <div class="p-field-radiobutton">
-        <p-radioButton name="diamonds" label="Karo" [value]="1" [(ngModel)]="pointsCounterDto.color" inputId="diamonds"></p-radioButton>
-      </div>
-      <div class="p-field-radiobutton">
-        <p-radioButton name="hearts" label="Kier" [value]="2" [(ngModel)]="pointsCounterDto.color" inputId="hearts"></p-radioButton>
-      </div>
-      <div class="p-field-radiobutton">
-        <p-radioButton name="spades" label="Pik" [value]="3" [(ngModel)]="pointsCounterDto.color" inputId="spades"></p-radioButton>
-      </div>
-      <div class="p-field-radiobutton">
-        <p-radioButton name="noTrump" label="Bez atu" [value]="4" [(ngModel)]="pointsCounterDto.color" inputId="noTrump"></p-radioButton>
+    <div class="p-d-flex p-field p-col-12 p-md-4">
+      <div class="auto-margin">
+        <label>Kolor</label>
+        <div class="p-field-radiobutton">
+          <p-radioButton name="clubs" label="Trefl" [value]="0" [(ngModel)]="pointsCounterDto.color" inputId="clubs"></p-radioButton>
+        </div>
+        <div class="p-field-radiobutton">
+          <p-radioButton name="diamonds" label="Karo" [value]="1" [(ngModel)]="pointsCounterDto.color" inputId="diamonds"></p-radioButton>
+        </div>
+        <div class="p-field-radiobutton">
+          <p-radioButton name="hearts" label="Kier" [value]="2" [(ngModel)]="pointsCounterDto.color" inputId="hearts"></p-radioButton>
+        </div>
+        <div class="p-field-radiobutton">
+          <p-radioButton name="spades" label="Pik" [value]="3" [(ngModel)]="pointsCounterDto.color" inputId="spades"></p-radioButton>
+        </div>
+        <div class="p-field-radiobutton">
+          <p-radioButton name="noTrump" label="Bez atu" [value]="4" [(ngModel)]="pointsCounterDto.color" inputId="noTrump"></p-radioButton>
+        </div>
       </div>
     </div>
     <div class="p-field p-col-12 p-md-4">
-      <label for="5">Przed partią</label>
+      <label for="5">Po partii</label>
       <p-selectButton [options]="stateOptions" [(ngModel)]="pointsCounterDto.afterGame" optionLabel="label" optionValue="value"></p-selectButton>
 
-      <label for="6">Przeciwnik przed partią</label>
+      <label for="6">Przeciwnik po partii</label>
       <p-selectButton [options]="stateOptions" [(ngModel)]="pointsCounterDto.enemyAfterGame" optionLabel="label" optionValue="value"></p-selectButton>
     </div>
-    <div class="p-field p-col-12 p-md-4">
-      <label>Kontry</label>
-      <div class="p-field-radiobutton">
-        <p-radioButton name="noDoubles" label="Brak" [value]="0" [(ngModel)]="pointsCounterDto.doubles" inputId="clubs"></p-radioButton>
-      </div>
-      <div class="p-field-radiobutton">
-        <p-radioButton name="doubled" label="Kontra" [value]="1" [(ngModel)]="pointsCounterDto.doubles" inputId="diamonds"></p-radioButton>
-      </div>
-      <div class="p-field-radiobutton">
-        <p-radioButton name="redoubled" label="Rekontra" [value]="2" [(ngModel)]="pointsCounterDto.doubles" inputId="hearts"></p-radioButton>
+    <div class="p-d-flex p-field p-col-12 p-md-4">
+      <div class="auto-margin">
+        <label>Kontry</label>
+        <div class="p-field-radiobutton">
+          <p-radioButton name="noDoubles" label="Brak" [value]="0" [(ngModel)]="pointsCounterDto.doubles" inputId="noDoubles"></p-radioButton>
+        </div>
+        <div class="p-field-radiobutton">
+          <p-radioButton name="doubled" label="Kontra" [value]="1" [(ngModel)]="pointsCounterDto.doubles" inputId="doubled"></p-radioButton>
+        </div>
+        <div class="p-field-radiobutton">
+          <p-radioButton name="redoubled" label="Rekontra" [value]="2" [(ngModel)]="pointsCounterDto.doubles" inputId="redoubled"></p-radioButton>
+        </div>
       </div>
     </div>
     <p-button id="submit" label="Submit" (onClick)="submit()"></p-button>
+    <p>{{ points$ | async }}</p>
   </div>
 </p-card>

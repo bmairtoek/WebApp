@@ -6,6 +6,7 @@
 .vertical-input-holder {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 0px;
 
     > label {
@@ -15,5 +16,16 @@
 }
 
 #submit {
+    margin: auto;
+}
+
+#main-wrapper {
+    align-items: center;
+    > div {
+        padding: 10px;
+    } 
+}
+
+.auto-margin {
     margin: auto;
 }
