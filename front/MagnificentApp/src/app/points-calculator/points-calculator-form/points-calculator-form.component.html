@@ -1,5 +1,5 @@
 <p-card [style]="{'max-width': '800px', 'margin': 'auto'}">
-  <div class="p-fluid p-formgrid p-grid tmp">
+  <div class="p-fluid p-formgrid p-grid" id="main-wrapper">
     <div class="p-field p-col-12 p-md-4 vertical-input-holder">
       <label class="vertical-text" for="1">Wylicytowane</label>
       <p-inputNumber [(ngModel)]="pointsCounterDto.bid" [showButtons]="true" buttonLayout="vertical" spinnerMode="vertical" inputId="1" [style]="{'width':'70px'}"
@@ -22,7 +22,7 @@
       </p-inputNumber>
     </div>
 
-    <div class="p-field p-col-12 p-md-4 tmp2">
+    <div class="p-d-flex p-field p-col-12 p-md-4">
       <div class="auto-margin">
         <label>Kolor</label>
         <div class="p-field-radiobutton">
@@ -49,7 +49,7 @@
       <label for="6">Przeciwnik po partii</label>
       <p-selectButton [options]="stateOptions" [(ngModel)]="pointsCounterDto.enemyAfterGame" optionLabel="label" optionValue="value"></p-selectButton>
     </div>
-    <div class="p-field p-col-12 p-md-4 tmp2">
+    <div class="p-d-flex p-field p-col-12 p-md-4">
       <div class="auto-margin">
         <label>Kontry</label>
         <div class="p-field-radiobutton">
