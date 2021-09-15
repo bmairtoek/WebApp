@@ -1,7 +1,7 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, throwError } from "rxjs";
-import { catchError } from "rxjs/operators";
+import { catchError, map } from "rxjs/operators";
 import { ApiPaths } from "src/environments/api-paths.enum";
 import { environment } from "src/environments/environment";
 
@@ -12,8 +12,10 @@ export class PointsCalculationService {
     public constructor(private http: HttpClient) {}
 
     public getPoints(dto: PointsCounterDto): Observable<number> {
+        var queryString = Object.keys(dto).map(key => key + '=' + (dto as any)[key]).join('&');
+        var params= new HttpParams({fromString: queryString});
         return this.http
-            .post<number>(`${environment.backendUrl}${ApiPaths.PointsCounter}`, dto)
+            .get<number>(`${environment.backendUrl}${ApiPaths.PointsCounter}`, { params })        
             .pipe(catchError((error: any) => throwError(error.json())));
     }
 }

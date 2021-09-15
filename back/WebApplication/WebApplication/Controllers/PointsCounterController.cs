@@ -1,5 +1,6 @@
 ﻿using BridgePointsCounter;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,13 +15,20 @@ namespace WebApplication.Controllers
     [ApiController]
     public class PointsCounterController : ControllerBase
     {
+        //private readonly ILogger<PointsCounterController> _logger;
+
+        //public PointsCounterController(ILogger<PointsCounterController> logger)
+        //{
+        //    _logger = logger;
+        //}
+
         /// <summary>
         /// Calculates score for sent dto
         /// </summary>
         /// <response code="200">Score</response>
-        [HttpPost]
+        [HttpGet]
         [ProducesResponseType(typeof(int), 200)]
-        public int Post([FromBody] PointsCounterDto dto)
+        public int Get([FromQuery] PointsCounterDto dto)
         {
             int score = new PointsCounter(dto).Calculate();
             return score;

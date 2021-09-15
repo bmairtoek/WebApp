@@ -28,16 +28,4 @@ namespace WebApplicationTests
             Assert.AreEqual(expectedValue, result);
         }
     }
-
-    public struct IMPScoreTestSourceModel
-    {
-        PointsCounterDto dto;
-        int expectedValue;
-
-        public IMPScoreTestSourceModel(PointsCounterDto dto, int expectedValue)
-        {
-            this.dto = dto;
-            this.expectedValue = expectedValue;
-        }
-    }
 }
