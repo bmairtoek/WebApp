@@ -25,16 +25,13 @@
   }
 
   .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     height: 60px;
     display: flex;
     align-items: center;
     background-color: #78a3c0;
     color: white;
     font-weight: 600;
+    margin-bottom: 2rem;
   }
 
   .toolbar img {
@@ -285,4 +282,18 @@
       display: none;
       visibility: hidden;
     }
+  }
+
+  .logo {
+      display: flex;
+      justify-content: center;
+
+    span {
+        display: flex;
+        align-items: center;
+    }
+  }
+
+  a *{
+    color: initial;
   }
